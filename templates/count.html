@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Count</title>
+    <style>
+        body{
+         background-image:url("https://www.technocrazed.com/wp-content/uploads/2015/12/Blue-Wallpaper-For-Background-30.jpg");
+         color:red;}
+    </style>
+</head>
+<body>
+<a href="{% url 'home' %}">Back to home page</a>
+ <h1>Counted</h1>
+  <h2> Your text</h2>
+   <textarea cols="70" rows="20" >{{fulltextarea}}</textarea>
+<br>
+ <h2>Words count</h2>
+  Total word = {{len}}
+<br>
+ <h2>Number of each word</h2>
+    {% for word,key in worddictionary %}
+     {{word}}={{key}}
+ <br>
+    {% endfor %}
+
+</body>
+</html>

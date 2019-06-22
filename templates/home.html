@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Count</title>
+    <style>
+        body{
+         background-image:url("https://cdn.pixabay.com/photo/2015/07/15/11/53/woodtype-846089_960_720.jpg");
+         color:yellow;
+         max-width: 500px;
+         margin: auto;}
+
+    </style>
+</head>
+<body>
+<h1 ><b>WORD COUNT</b></h1>
+<b>Welcome to wordcount website</b>
+<br>
+<form action="{% url 'count' %}">
+    <textarea name="fulltextarea" id="" cols="50" rows="10"></textarea>
+    <br>
+    <input type="submit" value="Count!" />
+</form>
+</body>
+</html>
